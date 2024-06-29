@@ -1,0 +1,21 @@
+.links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.logout{
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    border-style: none;
+    border-radius: 20px;
+    
+}
+.logout:hover{
+    background-color: rgb(58, 58, 230);
+    color: white;
+    border-style: none;
+}
