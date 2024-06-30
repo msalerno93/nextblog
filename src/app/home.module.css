@@ -11,7 +11,8 @@
 }
 
 .title{
-    font-size: 90px;
+    font-size: 88px;
+    color: var(--btn);
 }
 
 .desc{
@@ -38,19 +39,27 @@
     border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
-}
-
-.button:first-child{
     background-color: var(--btn);
     color: var(--text);
 }
 
-.button:first-child:hover{
+.button:hover{
     background-color: rgba(67, 67, 190, 0.693);
     color: var(--text);
 }
-.button:last-child:hover{
-    background-color: rgb(171, 165, 165);
+
+.button2{
+    padding: 20px;
+    cursor: pointer;
+    min-width: 120px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button2:hover{
+    background-color: rgba(209, 209, 209, 0.693);
     color: var(--text);
 }
 
