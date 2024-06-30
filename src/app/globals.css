@@ -27,9 +27,26 @@ a{
     margin: auto;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width: 1236px) {
+    .container{
+        width: 1066px;
+    }
+}
+
+@media (max-width: 1036px) {
+    .container{
+        width: 966px;
+    }
+}
+@media (max-width: 980px) {
+    .container{
+        width: 766px;
+    }
 }

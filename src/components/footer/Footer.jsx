@@ -1,8 +1,12 @@
-import React from 'react'
+import styles from "./footer.module.css"
+
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className={styles.container}>
+      <div className={styles.logo}>Logo Here</div>
+      {/* <div className={styles.text}>Next.js is really cool!</div> */}
+    </div>
   )
 }
 
