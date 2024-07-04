@@ -2,18 +2,19 @@ import Image from "next/image";
 import styles from "./singlePost.module.css";
 // import PostUser from "@/components/postUser/postUser";
 import { Suspense } from "react";
+import PostUser from "@/components/postUser/PostUser";
 // import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
-// const getData = async (slug) => {
-//   const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+const getData = async (slug) => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 // export const generateMetadata = async ({ params }) => {
 //   const { slug } = params;
@@ -27,10 +28,10 @@ import { Suspense } from "react";
 // };
 
 const SinglePostPage = async ({ params }) => {
-  // const { slug } = params;
+  const { slug } = params;
 
   // // FETCH DATA WITH AN API
-  // const post = await getData(slug);
+  const post = await getData(slug);
 
   // FETCH DATA WITHOUT AN API
   // const post = await getPost(slug);
@@ -40,25 +41,23 @@ const SinglePostPage = async ({ params }) => {
       <div className={styles.imgContainer}>
         <Image src="/contact.png" alt="" fill className={styles.img} />
       </div>
-
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>Title</h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.detail}>
           <Suspense fallback={<div>Loading...</div>}>
-            {/* <PostUser userId={post.userId} /> */}
+            <PostUser userId={post.userId} />
           </Suspense>
 
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
-              Hello there its meeeee
+              01.01.2021
               {/* {post.createdAt.toString().slice(4, 16)} */}
             </span>
           </div>
         </div>
         <div className={styles.content}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-          illo.
+          {post.body}
         </div>
       </div>
     </div>
