@@ -6,19 +6,24 @@ import Footer from "@/components/footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Blogger",
-  description: "Simple blog post application",
+  title: {
+    default:"Blogger",
+    template:"%s | Next.js 14"
+  },
+  description: "Next.js starter app description",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="container">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        {/* <ClientSideProviderTest> */}
+          <div className="container">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        {/* </ClientSideProviderTest> */}
       </body>
     </html>
   );

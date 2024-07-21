@@ -25,7 +25,7 @@ const ContactPage = () => {
         {/* <HydrationTestNoSSR/> */}
         {/* <div suppressHydrationWarning>{a}</div> */}
         <form action="" className={styles.form}>
-          <input type="text" placeholder="Full Name" />
+          <input type="text" placeholder="Name and Surname" />
           <input type="text" placeholder="Email Address" />
           <input type="text" placeholder="Phone Number (Optional)" />
           <textarea
