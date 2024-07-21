@@ -1,17 +1,14 @@
-import styles from "./footer.module.css"
-import { FaBlog } from "react-icons/fa";
-
-
+import styles from "./footer.module.css";
 
 const Footer = () => {
   return (
     <div className={styles.container}>
-      {/* <div className={styles.logo}> */}
-        {/* <FaBlog /> */}
-      {/* </div> */}
-      {/* <div className={styles.text}>Next.js is really cool!</div> */}
+      <div className={styles.logo}>lamadev</div>
+      <div className={styles.text}>
+        Lama creative thoughts agency © All rights reserved.
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

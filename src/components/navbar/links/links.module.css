@@ -2,21 +2,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 18px;
 }
 
 .logout {
-  padding: 12px;
+  padding: 10px;
   cursor: pointer;
-  font-size: 18px;
-  font-weight: bolder;
-  border-style: none;
-  border-radius: 20px;
-}
-.logout:hover {
-  background-color: rgb(58, 58, 230);
-  color: white;
-  border-style: none;
+  font-weight: bold;
 }
 
 .menuButton,
@@ -24,9 +15,14 @@
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .links {
     display: none;
+  }
+
+  .menuButton {
+    display: block;
+    cursor: pointer;
   }
 
   .mobileLinks {
@@ -35,17 +31,11 @@
     right: 0;
     width: 50%;
     height: calc(100vh - 100px);
-    /* background-color: var(--bg); */
-    background-color: red;
+    background-color: var(--bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
-
-  .menuButton{
-    display: block;
-    cursor: pointer;
   }
 }
